@@ -65,6 +65,14 @@ class QuranTab extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
+                    "Most Recent",
+                    style: TextStyles.smallLabel(textColor: AppColors.white),
+                  ),
+                ),
+                SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
                     "Suras List",
                     style: TextStyles.smallLabel(textColor: AppColors.white),
                   ),
