@@ -2,23 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:islami_mon_c16_online/core/styles/app_colors.dart';
 import 'package:islami_mon_c16_online/core/styles/text_styles.dart';
 import 'package:islami_mon_c16_online/model/sura_dm.dart';
-import 'package:islami_mon_c16_online/ui/sura_details/sura_details_screen.dart';
 
 class SuraCard extends StatelessWidget {
   final SuraDM sura;
+  final Function(SuraDM) onSuraClick;
 
-  const SuraCard({required this.sura, super.key});
+  const SuraCard({required this.sura, required this.onSuraClick, super.key});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // here is a navigation to sura details screen
-        Navigator.pushNamed(
-          context,
-          SuraDetailsScreen.routeName,
-          arguments: sura,
-        );
+        onSuraClick(sura);
       },
       child: Row(
         children: [
