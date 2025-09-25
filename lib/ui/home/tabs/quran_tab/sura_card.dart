@@ -13,6 +13,7 @@ class SuraCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        // here is a navigation to sura details screen
         Navigator.pushNamed(
           context,
           SuraDetailsScreen.routeName,
